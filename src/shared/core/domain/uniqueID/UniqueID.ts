@@ -1,5 +1,8 @@
-export class UniqueID {
-	constructor(public readonly value: number) {
+import { ValueObject } from "../base/valueObject/ValueObject";
+
+export class UniqueID extends ValueObject<number> {
+	constructor(value: number) {
+		super(value);
 		this.verifyData();
 	}
 

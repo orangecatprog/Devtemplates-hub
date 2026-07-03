@@ -11,6 +11,6 @@ export abstract class Entity<T> {
 	}
 
 	public equals(other: Entity<T>): boolean {
-		return this._id === other._id;
+		return this._id.equals(other._id);
 	}
 }

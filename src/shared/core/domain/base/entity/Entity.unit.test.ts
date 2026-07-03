@@ -10,7 +10,7 @@ describe("Entity", () => {
 			name: "test",
 		});
 
-		expect(entity.id).toBe(new UniqueID(id));
+		expect(entity.id.value).toBe(1);
 	});
 	it("should be equal when ids are equal", () => {
 		const id = 1;
