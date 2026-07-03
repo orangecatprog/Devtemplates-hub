@@ -1,0 +1,25 @@
+{
+	"name": "devtemplates-hub",
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"lint": "biome lint .",
+		"format": "biome format .",
+		"check": "biome check .",
+		"prepare": "husky",
+		"lint-staged": "lint-staged",
+		"test": "vitest",
+		"test:watch": "vitest --watch"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.2",
+		"@types/bun": "latest",
+		"@types/node": "^26.1.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.0.8",
+		"vitest": "^4.1.9"
+	},
+	"peerDependencies": {
+		"typescript": "^6.0.3"
+	}
+}
