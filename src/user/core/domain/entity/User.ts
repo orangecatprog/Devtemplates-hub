@@ -1,5 +1,6 @@
 import { Entity } from "@shared/core/domain/base/entity/Entity";
 import type { UserData } from "./UserData";
+
 import type { URL } from "@shared/core/domain/url/URL";
 import type { Bio } from "./bio/Bio";
 import type { Email } from "./email/Email";
@@ -52,12 +53,12 @@ export class User extends Entity<UserData> {
 		this.data.githubUrl = githubUrl;
 	}
 
-	changePasswordHash(passwordHash: PasswordHash): void {
-		this.data.passwordHash = passwordHash;
-	}
-
 	changeLinkedinUrl(linkedinUrl: URL): void {
 		this.data.linkedinUrl = linkedinUrl;
+	}
+
+	changePasswordHash(passwordHash: PasswordHash): void {
+		this.data.passwordHash = passwordHash;
 	}
 
 	passwordEqual(password: PasswordHash): boolean {
