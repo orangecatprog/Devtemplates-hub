@@ -1,10 +1,12 @@
+import type { UniqueID } from "../../uniqueID/UniqueID";
+
 export abstract class Entity<T> {
 	constructor(
-		protected readonly _id: number,
+		protected readonly _id: UniqueID,
 		protected readonly data: T,
 	) {}
 
-	public get id(): number {
+	public get id(): UniqueID {
 		return this._id;
 	}
 

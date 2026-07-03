@@ -1,33 +1,34 @@
 import { describe, expect, it } from "vitest";
+import { UniqueID } from "../../uniqueID/UniqueID";
 import { FakeEntity } from "./Entity.fake.test";
 
 describe("Entity", () => {
 	it("should expose its id", () => {
 		const id = 1;
 
-		const entity = new FakeEntity(id, {
+		const entity = new FakeEntity(new UniqueID(id), {
 			name: "test",
 		});
 
-		expect(entity.id).toBe(id);
+		expect(entity.id).toBe(new UniqueID(id));
 	});
 	it("should be equal when ids are equal", () => {
 		const id = 1;
 
-		const entity1 = new FakeEntity(id, {
+		const entity1 = new FakeEntity(new UniqueID(id), {
 			name: "test",
 		});
-		const entity2 = new FakeEntity(id, {
+		const entity2 = new FakeEntity(new UniqueID(id), {
 			name: "test2",
 		});
 
 		expect(entity1.equals(entity2)).toBe(true);
 	});
 	it("should not be equal when ids are different", () => {
-		const entity1 = new FakeEntity(1, {
+		const entity1 = new FakeEntity(new UniqueID(1), {
 			name: "test",
 		});
-		const entity2 = new FakeEntity(2, {
+		const entity2 = new FakeEntity(new UniqueID(2), {
 			name: "test2",
 		});
 
