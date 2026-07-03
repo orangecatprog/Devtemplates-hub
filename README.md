@@ -1,4 +1,4 @@
-# devtemplates-hub
+# DevTemplates Hub
 
 To install dependencies:
 
