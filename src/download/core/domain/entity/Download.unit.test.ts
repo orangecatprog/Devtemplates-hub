@@ -1,0 +1,35 @@
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { describe, it, expect } from "vitest";
+import { validDownloadData } from "./Download.helper.test";
+import { Download } from "./Download";
+
+describe("Download", () => {
+	it("should create a download with valid data", () => {
+		const download = new Download(new UniqueID(1), validDownloadData());
+		expect(download).toBeDefined();
+	});
+	describe("Date", () => {
+		it("should expose date correctly", () => {
+			const download = new Download(new UniqueID(1), validDownloadData());
+			expect(download.date.getTime()).toBe(
+				validDownloadData().date.getTime(),
+			);
+		});
+	});
+	describe("User ID", () => {
+		it("should expose user id correctly", () => {
+			const download = new Download(new UniqueID(1), validDownloadData());
+			expect(download.userId.value).toBe(
+				validDownloadData().userId.value,
+			);
+		});
+	});
+	describe("Template ID", () => {
+		it("should expose template id correctly", () => {
+			const download = new Download(new UniqueID(1), validDownloadData());
+			expect(download.templateId.value).toBe(
+				validDownloadData().templateId.value,
+			);
+		});
+	});
+});
