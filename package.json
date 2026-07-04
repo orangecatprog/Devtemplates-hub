@@ -9,7 +9,11 @@
 		"prepare": "husky",
 		"lint-staged": "lint-staged",
 		"test": "vitest",
-		"test:watch": "vitest --watch"
+		"test:all": "vitest --dir=src",
+		"test:shared": "vitest --dir=src/shared",
+		"test:template": "vitest --dir=src/template",
+		"test:user": "vitest --dir=src/user",
+		"test:category": "vitest --dir=src/category"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.2",

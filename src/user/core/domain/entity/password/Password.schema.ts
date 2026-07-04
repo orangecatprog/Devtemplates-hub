@@ -1,14 +1,18 @@
-import { z } from "zod";
+const PASSWORD_REGEX = /^[a-zA-Z0-9_-]+$/;
 
-export const PasswordSchema = z
-	.string()
-	.min(8, "Password must contain at least 8 characters.")
-	.max(100, "Password cannot exceed 100 characters.")
-	.regex(
-		/^[a-zA-Z0-9_-]+$/,
-		"Password can only contain letters, numbers, hyphens and underscores.",
-	)
-	.refine(
-		(value) => value === value.trim(),
-		"Password cannot contain leading or trailing spaces.",
-	);
+export function validatePassword(value: string): void {
+	if (value.length < 8) {
+		throw new Error("Password must contain at least 8 characters.");
+	}
+	if (value.length > 100) {
+		throw new Error("Password cannot exceed 100 characters.");
+	}
+	if (value !== value.trim()) {
+		throw new Error("Password cannot contain leading or trailing spaces.");
+	}
+	if (!PASSWORD_REGEX.test(value)) {
+		throw new Error(
+			"Password can only contain letters, numbers, hyphens and underscores.",
+		);
+	}
+}

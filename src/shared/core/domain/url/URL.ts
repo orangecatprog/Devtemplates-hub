@@ -1,13 +1,13 @@
 import { ValueObject } from "../base/valueObject/ValueObject";
-import { URLSchema } from "./URL.schema";
+import { validateUrl } from "./Url.schema";
 
-export class URL extends ValueObject<string> {
+export class Url extends ValueObject<string> {
 	constructor(value: string) {
 		super(value);
 		this.validate();
 	}
 
 	private validate(): void {
-		URLSchema.parse(super.value);
+		validateUrl(super.value);
 	}
 }

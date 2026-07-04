@@ -1,7 +1,7 @@
 import { Entity } from "@shared/core/domain/base/entity/Entity";
 import type { UserData } from "./UserData";
 
-import type { URL } from "@shared/core/domain/url/URL";
+import type { Url } from "@/shared/core/domain/url/Url";
 import type { Bio } from "./bio/Bio";
 import type { Email } from "./email/Email";
 import type { Username } from "./username/Username";
@@ -9,6 +9,7 @@ import type { Role } from "./role/Role";
 import type { PasswordHash } from "./passwordHash/PasswordHash";
 
 export class User extends Entity<UserData> {
+	// GETTERS
 	get username(): Username {
 		return this.data.username;
 	}
@@ -17,11 +18,11 @@ export class User extends Entity<UserData> {
 		return this.data.email;
 	}
 
-	get githubUrl(): URL | undefined {
+	get githubUrl(): Url {
 		return this.data.githubUrl;
 	}
 
-	get linkedinUrl(): URL | undefined {
+	get linkedinUrl(): Url | undefined {
 		return this.data.linkedinUrl;
 	}
 
@@ -37,6 +38,8 @@ export class User extends Entity<UserData> {
 		return this.data.role;
 	}
 
+	// MUTATORS
+
 	changeUsername(username: Username): void {
 		this.data.username = username;
 	}
@@ -49,11 +52,11 @@ export class User extends Entity<UserData> {
 		this.data.bio = bio;
 	}
 
-	changeGithubUrl(githubUrl: URL): void {
+	changeGithubUrl(githubUrl: Url): void {
 		this.data.githubUrl = githubUrl;
 	}
 
-	changeLinkedinUrl(linkedinUrl: URL): void {
+	changeLinkedinUrl(linkedinUrl: Url | undefined): void {
 		this.data.linkedinUrl = linkedinUrl;
 	}
 
@@ -61,6 +64,11 @@ export class User extends Entity<UserData> {
 		this.data.passwordHash = passwordHash;
 	}
 
+	changeRole(role: Role): void {
+		this.data.role = role;
+	}
+
+	// HELPERS
 	passwordEqual(password: PasswordHash): boolean {
 		return this.data.passwordHash.equals(password);
 	}

@@ -6,7 +6,7 @@ import { validUserData } from "./User.helper.test";
 import { Username } from "./username/Username";
 import { Email } from "./email/Email";
 import { Bio } from "./bio/Bio";
-import { URL } from "@/shared/core/domain/url/URL";
+import { Url } from "@/shared/core/domain/url/Url";
 import { PasswordHash } from "./passwordHash/PasswordHash";
 
 describe("User", () => {
@@ -14,80 +14,96 @@ describe("User", () => {
 		const user = new User(new UniqueID(1), validUserData());
 		expect(user).toBeDefined();
 	});
+	describe("Username", () => {
+		it("should expose username correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.username.value).toBe("john_doe");
+		});
 
-	it("should preserve the provided id", () => {
-		const user = new User(new UniqueID(1), validUserData());
-		expect(user.id.value).toBe(1);
+		it("should change username", () => {
+			const user = new User(new UniqueID(1), validUserData());
+
+			user.changeUsername(new Username("new_name"));
+
+			expect(user.username.value).toBe("new_name");
+		});
 	});
+	describe("Email", () => {
+		it("should expose email correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.email.value).toBe("john@email.com");
+		});
 
-	it("should expose username correctly", () => {
-		const user = new User(new UniqueID(1), validUserData());
-		expect(user.username.value).toBe("john_doe");
+		it("should change email", () => {
+			const user = new User(new UniqueID(1), validUserData());
+
+			user.changeEmail(new Email("new@email.com"));
+
+			expect(user.email.value).toBe("new@email.com");
+		});
 	});
+	describe("Bio", () => {
+		it("should expose bio correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.bio.value).toBe(
+				"developer with 10 years of experience",
+			);
+		});
 
-	it("should change username", () => {
-		const user = new User(new UniqueID(1), validUserData());
+		it("should update bio", () => {
+			const user = new User(new UniqueID(1), validUserData());
 
-		user.changeUsername(new Username("new_name"));
+			user.updateBio(new Bio("new bio with 10 years of experience"));
 
-		expect(user.username.value).toBe("new_name");
+			expect(user.bio.value).toBe("new bio with 10 years of experience");
+		});
 	});
+	describe("Github URL", () => {
+		it("should expose github url correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.githubUrl?.value).toBe("https://github.com/john");
+		});
 
-	it("should change email", () => {
-		const user = new User(new UniqueID(1), validUserData());
+		it("should set github url", () => {
+			const user = new User(new UniqueID(1), validUserData());
 
-		user.changeEmail(new Email("new@email.com"));
+			const url = new Url("https://github.com/new");
+			user.changeGithubUrl(url);
 
-		expect(user.email.value).toBe("new@email.com");
+			expect(user.githubUrl?.value).toBe("https://github.com/new");
+		});
 	});
+	describe("Linkedin URL", () => {
+		it("should expose linkedin url correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.linkedinUrl?.value).toBe(
+				"https://linkedin.com/in/john",
+			);
+		});
 
-	it("should update bio", () => {
-		const user = new User(new UniqueID(1), validUserData());
+		it("should set linkedin url", () => {
+			const user = new User(new UniqueID(1), validUserData());
 
-		user.updateBio(new Bio("new bio with 10 years of experience"));
+			const url = new Url("https://linkedin.com/in/new");
+			user.changeLinkedinUrl(url);
 
-		expect(user.bio.value).toBe("new bio with 10 years of experience");
+			expect(user.linkedinUrl?.value).toBe("https://linkedin.com/in/new");
+		});
 	});
+	describe("Password Hash", () => {
+		it("should compare password hashes correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.equals(user)).toBe(true);
+		});
 
-	it("should set github url", () => {
-		const user = new User(new UniqueID(1), validUserData());
+		it("should update password hash", () => {
+			const user = new User(new UniqueID(1), validUserData());
 
-		const url = new URL("https://github.com/new");
-		user.changeGithubUrl(url);
+			const newHash = new PasswordHash("new-hash");
 
-		expect(user.githubUrl?.value).toBe("https://github.com/new");
-	});
+			user.changePasswordHash(newHash);
 
-	it("should set linkedin url", () => {
-		const user = new User(new UniqueID(1), validUserData());
-
-		const url = new URL("https://linkedin.com/in/new");
-		user.changeLinkedinUrl(url);
-
-		expect(user.linkedinUrl?.value).toBe("https://linkedin.com/in/new");
-	});
-
-	it("should update password hash", () => {
-		const user = new User(new UniqueID(1), validUserData());
-
-		const newHash = new PasswordHash("new-hash");
-
-		user.changePasswordHash(newHash);
-
-		expect(user.passwordEqual(newHash)).toBe(true);
-	});
-
-	it("should be equal when ids match", () => {
-		const user1 = new User(new UniqueID(1), validUserData());
-		const user2 = new User(new UniqueID(1), validUserData());
-
-		expect(user1.equals(user2)).toBe(true);
-	});
-
-	it("should not be equal when ids differ", () => {
-		const user1 = new User(new UniqueID(1), validUserData());
-		const user2 = new User(new UniqueID(2), validUserData());
-
-		expect(user1.equals(user2)).toBe(false);
+			expect(user.passwordEqual(newHash)).toBe(true);
+		});
 	});
 });

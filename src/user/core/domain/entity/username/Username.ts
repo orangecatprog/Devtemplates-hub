@@ -1,5 +1,5 @@
 import { ValueObject } from "@shared/core/domain/base/valueObject/ValueObject";
-import { UsernameSchema } from "./Username.schema";
+import { validateUsername } from "./Username.schema";
 
 export class Username extends ValueObject<string> {
 	constructor(value: string) {
@@ -8,6 +8,6 @@ export class Username extends ValueObject<string> {
 	}
 
 	private validate(): void {
-		UsernameSchema.parse(super.value);
+		validateUsername(super.value);
 	}
 }

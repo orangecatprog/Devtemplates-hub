@@ -1,5 +1,5 @@
 import { ValueObject } from "@/shared/core/domain/base/valueObject/ValueObject";
-import { EmailSchema } from "./Email.schema";
+import { validateEmail } from "./Email.schema";
 
 export class Email extends ValueObject<string> {
 	constructor(value: string) {
@@ -8,6 +8,6 @@ export class Email extends ValueObject<string> {
 	}
 
 	private validate(): void {
-		EmailSchema.parse(super.value);
+		validateEmail(super.value);
 	}
 }

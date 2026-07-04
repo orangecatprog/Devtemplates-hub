@@ -1,5 +1,7 @@
-import { z } from "zod";
-
-export const URLSchema = z.url({
-	error: "URL must be a valid URL.",
-});
+export function validateUrl(value: string): void {
+	try {
+		new URL(value);
+	} catch {
+		throw new Error("Url must be a valid Url.");
+	}
+}

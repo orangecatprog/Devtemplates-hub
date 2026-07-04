@@ -1,13 +1,13 @@
 import { ValueObject } from "@/shared/core/domain/base/valueObject/ValueObject";
-import { validatePassword } from "./Password.schema";
+import { validateDescription } from "./Description.schema";
 
-export class Password extends ValueObject<string> {
+export class Description extends ValueObject<string> {
 	constructor(value: string) {
 		super(value);
 		this.validate();
 	}
 
 	private validate(): void {
-		validatePassword(super.value);
+		validateDescription(super.value);
 	}
 }

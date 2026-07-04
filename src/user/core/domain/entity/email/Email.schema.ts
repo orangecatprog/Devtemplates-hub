@@ -1,5 +1,7 @@
-import { z } from "zod";
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export const EmailSchema = z.email({
-	error: "Email must be a valid email address.",
-});
+export function validateEmail(value: string): void {
+	if (!EMAIL_REGEX.test(value)) {
+		throw new Error("Email must be a valid email address.");
+	}
+}
