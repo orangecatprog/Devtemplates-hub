@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { CategoryDescription } from "./Description";
 
-describe("Description", () => {
+describe("CategoryDescription", () => {
 	it("should create with a valid description", () => {
 		const description = new CategoryDescription("My category");
 		expect(description.value).toBe("My category");
@@ -13,7 +13,7 @@ describe("Description", () => {
 		});
 		it("should throw for a description with less than 10 characters", () => {
 			expect(() => new CategoryDescription("a".repeat(9))).toThrow(
-				"Description must contain at least 10 characters.",
+				"Category description must contain at least 10 characters.",
 			);
 		});
 	});
@@ -24,7 +24,7 @@ describe("Description", () => {
 		});
 		it("should throw for a description with more than 300 characters", () => {
 			expect(() => new CategoryDescription("a".repeat(301))).toThrow(
-				"Description cannot exceed 300 characters.",
+				"Category description cannot exceed 300 characters.",
 			);
 		});
 	});

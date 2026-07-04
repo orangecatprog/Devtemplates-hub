@@ -3,7 +3,7 @@ import { Template } from "./Template";
 import { UniqueID } from "@/shared/core/domain/uniqueID/UniqueID";
 import { validTemplateData } from "./Template.helper.test";
 import { Title } from "./title/Title";
-import { Description } from "./description/Description";
+import { TemplateDescription } from "./description/Description";
 import { Url } from "@/shared/core/domain/url/Url";
 import { Difficulty } from "./difficulty/Difficulty";
 import { State } from "./state/State";
@@ -40,7 +40,7 @@ describe("Template", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());
 
 			template.changeDescription(
-				new Description("Updated template description"),
+				new TemplateDescription("Updated template description"),
 			);
 
 			expect(template.description.value).toBe(
