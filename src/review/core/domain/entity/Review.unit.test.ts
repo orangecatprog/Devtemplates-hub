@@ -17,9 +17,9 @@ describe("Review", () => {
 		it("should change score", () => {
 			const review = new Review(new UniqueID(1), validReviewData());
 
-			review.changeScore(new Score(10));
+			review.changeScore(new Score(2));
 
-			expect(review.score.value).toBe(10);
+			expect(review.score.value).toBe(2);
 		});
 	});
 	describe("User ID", () => {
