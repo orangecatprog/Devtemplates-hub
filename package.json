@@ -14,7 +14,10 @@
 		"test:template": "vitest --dir=src/template",
 		"test:user": "vitest --dir=src/user",
 		"test:category": "vitest --dir=src/category",
-		"test:technology": "vitest --dir=src/technology"
+		"test:technology": "vitest --dir=src/technology",
+		"test:comment": "vitest --dir=src/comment",
+		"test:review": "vitest --dir=src/review",
+		"test:favorite": "vitest --dir=src/favorite"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.2",
