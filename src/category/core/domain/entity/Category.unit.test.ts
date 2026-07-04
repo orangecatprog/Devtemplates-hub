@@ -1,8 +1,8 @@
-import { UniqueID } from "@/shared/core/domain/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { describe, expect, it } from "vitest";
 import { validCategoryData } from "./Category.helper.test";
 import { Category } from "./Category";
-import { Name } from "./name/Name";
+import { Name } from "../../../../shared/core/domain/entities/name/Name";
 import { Slug } from "./slug/Slug";
 import { CategoryDescription } from "./description/Description";
 

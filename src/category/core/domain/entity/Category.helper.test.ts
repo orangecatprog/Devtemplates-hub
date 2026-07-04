@@ -1,4 +1,4 @@
-import { Name } from "./name/Name";
+import { Name } from "../../../../shared/core/domain/entities/name/Name";
 import { Slug } from "./slug/Slug";
 import type { CategoryData } from "./CategoryData";
 import { CategoryDescription } from "./description/Description";

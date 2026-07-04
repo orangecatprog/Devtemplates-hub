@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { UniqueID } from "../../uniqueID/UniqueID";
+import { UniqueID } from "../../valueObjects/uniqueID/UniqueID";
 import { FakeEntity } from "./Entity.fake.test";
 
 describe("Entity", () => {

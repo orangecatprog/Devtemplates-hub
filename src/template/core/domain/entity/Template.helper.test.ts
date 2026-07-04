@@ -3,7 +3,7 @@ import { TemplateDescription } from "./description/Description";
 import { Title } from "./title/Title";
 import { Difficulty } from "./difficulty/Difficulty";
 import { State } from "./state/State";
-import { UniqueID } from "@/shared/core/domain/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 
 export function validTemplateData() {
 	return {

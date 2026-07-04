@@ -13,7 +13,8 @@
 		"test:shared": "vitest --dir=src/shared",
 		"test:template": "vitest --dir=src/template",
 		"test:user": "vitest --dir=src/user",
-		"test:category": "vitest --dir=src/category"
+		"test:category": "vitest --dir=src/category",
+		"test:technology": "vitest --dir=src/technology"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.2",

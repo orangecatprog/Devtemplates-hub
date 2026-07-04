@@ -1,6 +1,6 @@
 import { Entity } from "@/shared/core/domain/base/entity/Entity";
 import type { CategoryData } from "./CategoryData";
-import type { Name } from "./name/Name";
+import type { Name } from "../../../../shared/core/domain/entities/name/Name";
 import type { Slug } from "./slug/Slug";
 import type { CategoryDescription } from "./description/Description";
 

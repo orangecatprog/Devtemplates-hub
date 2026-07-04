@@ -1,4 +1,4 @@
-import type { UniqueID } from "../../uniqueID/UniqueID";
+import type { UniqueID } from "../../valueObjects/uniqueID/UniqueID";
 
 export abstract class Entity<T> {
 	constructor(

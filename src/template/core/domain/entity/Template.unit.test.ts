@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { Template } from "./Template";
-import { UniqueID } from "@/shared/core/domain/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { validTemplateData } from "./Template.helper.test";
 import { Title } from "./title/Title";
 import { TemplateDescription } from "./description/Description";

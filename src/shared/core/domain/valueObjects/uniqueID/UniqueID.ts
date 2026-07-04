@@ -1,4 +1,4 @@
-import { ValueObject } from "../base/valueObject/ValueObject";
+import { ValueObject } from "../../base/valueObject/ValueObject";
 
 export class UniqueID extends ValueObject<number> {
 	constructor(value: number) {

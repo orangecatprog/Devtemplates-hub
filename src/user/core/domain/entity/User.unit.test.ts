@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 
 import { User } from "./User";
-import { UniqueID } from "@/shared/core/domain/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { validUserData } from "./User.helper.test";
 import { Username } from "./username/Username";
 import { Email } from "./email/Email";
