@@ -17,7 +17,8 @@
 		"test:technology": "vitest --dir=src/technology",
 		"test:comment": "vitest --dir=src/comment",
 		"test:review": "vitest --dir=src/review",
-		"test:favorite": "vitest --dir=src/favorite"
+		"test:favorite": "vitest --dir=src/favorite",
+		"test:download": "vitest --dir=src/download"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^2.5.2",
