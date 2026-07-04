@@ -5,7 +5,7 @@ import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { Content } from "./content/Content";
 
 describe("Comment", () => {
-	it("should create with a valid data", () => {
+	it("should create a comment with valid data", () => {
 		const comment = new Comment(new UniqueID(1), validCommentData());
 		expect(comment).toBeDefined();
 	});
