@@ -1,7 +1,7 @@
+import { Entity } from "@/shared/core/domain/entities/base/Entity";
 import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import type { Score } from "./score/Score";
-import { Entity } from "@/shared/core/domain/base/entity/Entity";
 import type { ReviewData } from "./ReviewData";
+import type { Score } from "./score/Score";
 
 export class Review extends Entity<ReviewData> {
 	get score(): Score {

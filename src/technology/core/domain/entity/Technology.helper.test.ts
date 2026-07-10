@@ -1,4 +1,4 @@
-import { Name } from "@/shared/core/domain/entities/name/Name";
+import { Name } from "@/shared/core/domain/valueObjects/name/Name";
 import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import type { TechnologyData } from "./TechnologyData";
 

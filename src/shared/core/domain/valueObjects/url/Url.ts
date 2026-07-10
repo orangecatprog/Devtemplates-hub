@@ -1,4 +1,4 @@
-import { ValueObject } from "../../base/valueObject/ValueObject";
+import { ValueObject } from "../base/ValueObject";
 import { validateUrl } from "./Url.schema";
 
 export class Url extends ValueObject<string> {

@@ -1,4 +1,4 @@
-import { ValueObject } from "@/shared/core/domain/base/valueObject/ValueObject";
+import { ValueObject } from "@/shared/core/domain/valueObjects/base/ValueObject";
 import { RoleSchema } from "./Role.schema";
 
 export class Role extends ValueObject<RoleSchema> {
@@ -8,7 +8,8 @@ export class Role extends ValueObject<RoleSchema> {
 
 	canManageEntities(): boolean {
 		return (
-			this.value === RoleSchema.ADMIN || this.value === RoleSchema.MODERATOR
+			this.value === RoleSchema.ADMIN ||
+			this.value === RoleSchema.MODERATOR
 		);
 	}
 

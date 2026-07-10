@@ -1,4 +1,4 @@
-import { Entity } from "@shared/core/domain/base/entity/Entity";
+import { Entity } from "@/shared/core/domain/entities/base/Entity";
 import type { UserData } from "./UserData";
 
 import type { Url } from "@/shared/core/domain/valueObjects/url/Url";

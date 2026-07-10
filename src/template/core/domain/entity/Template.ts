@@ -1,10 +1,10 @@
-import { Entity } from "@/shared/core/domain/base/entity/Entity";
-import type { TemplateData } from "./TemplateData";
-import type { Title } from "./title/Title";
-import type { Description } from "./description/Description";
+import { Entity } from "@/shared/core/domain/entities/base/Entity";
 import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
+import type { Description } from "./description/Description";
 import type { Difficulty } from "./difficulty/Difficulty";
 import { State } from "./state/State";
+import type { TemplateData } from "./TemplateData";
+import type { Title } from "./title/Title";
 
 export class Template extends Entity<TemplateData> {
 	get title(): Title {

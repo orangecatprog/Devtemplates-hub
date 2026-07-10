@@ -1,4 +1,4 @@
-import { ValueObject } from "../../base/valueObject/ValueObject";
+import { ValueObject } from "../base/ValueObject";
 import { validateUniqueID } from "./UniqueID.schema";
 
 export class UniqueID extends ValueObject<number> {

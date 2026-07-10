@@ -1,5 +1,5 @@
+import type { Name } from "../../../../shared/core/domain/valueObjects/name/Name";
 import type { CategoryDescription } from "./description/Description";
-import type { Name } from "../../../../shared/core/domain/entities/name/Name";
 import type { Slug } from "./slug/Slug";
 
 export interface CategoryData {

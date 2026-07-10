@@ -1,8 +1,8 @@
+import { Name } from "@/shared/core/domain/valueObjects/name/Name";
 import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { describe, expect, it } from "vitest";
-import { validTechnologyData } from "./Technology.helper.test";
 import { Technology } from "./Technology";
-import { Name } from "@/shared/core/domain/entities/name/Name";
+import { validTechnologyData } from "./Technology.helper.test";
 
 describe("Technology", () => {
 	it("should create a technology with valid data", () => {
