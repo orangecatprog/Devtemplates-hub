@@ -3,9 +3,11 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"scripts": {
-		"lint": "biome lint .",
-		"format": "biome format .",
-		"check": "biome check .",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"check": "eslint . && prettier --check .",
 		"prepare": "husky",
 		"lint-staged": "lint-staged",
 		"test": "vitest",
@@ -18,10 +20,11 @@
 		"test:comment": "vitest --dir=src/comment",
 		"test:review": "vitest --dir=src/review",
 		"test:favorite": "vitest --dir=src/favorite",
-		"test:download": "vitest --dir=src/download"
+		"test:download": "vitest --dir=src/download",
+		"test:watch": "vitest --dir=src --watch",
+		"coverage": "vitest run --coverage --dir=src --watch=false"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^2.5.2",
 		"@commitlint/cli": "^21.2.0",
 		"@commitlint/config-conventional": "^21.2.0",
 		"@eslint/css": "^1.4.0",
