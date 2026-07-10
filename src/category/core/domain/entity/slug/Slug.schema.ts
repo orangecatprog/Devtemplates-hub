@@ -1,6 +1,6 @@
 const specialCharacters = /[!@#$%^&*()_+=[\]{};':"\\|,.<>/?]/;
 
-export function validateSlug(value: string): void {
+export function validateSlug(value: string): string {
 	if (value.toLowerCase() !== value) {
 		throw new Error("Slug must be lowercase");
 	}
@@ -16,4 +16,5 @@ export function validateSlug(value: string): void {
 	if (value.length > 100) {
 		throw new Error("Slug must be at most 100 characters long");
 	}
+	return value;
 }

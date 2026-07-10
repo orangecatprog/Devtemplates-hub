@@ -6,6 +6,11 @@ describe("ValueObject", () => {
 		const vo = new FakeValueObject("test");
 		expect(vo.equals(vo)).toBe(true);
 	});
+	it("should be equal to itself", () => {
+		const vo = new FakeValueObject("test");
+
+		expect(vo.equals(vo)).toBe(true);
+	});
 	it("should be equal when values are equal", () => {
 		const vo1 = new FakeValueObject("test");
 		const vo2 = new FakeValueObject("test");

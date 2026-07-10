@@ -9,9 +9,6 @@ export class Category extends Entity<CategoryData> {
 		return this.data.name;
 	}
 	changeName(name: Name): void {
-		if (this.data.name.equals(name)) {
-			return;
-		}
 		this.data.name = name;
 	}
 	get slug(): Slug {

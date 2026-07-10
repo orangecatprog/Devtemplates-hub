@@ -12,6 +12,15 @@ describe("Entity", () => {
 
 		expect(entity.id.value).toBe(1);
 	});
+	it("should be equal to itself", () => {
+		const id = 1;
+
+		const entity = new FakeEntity(new UniqueID(id), {
+			name: "test",
+		});
+
+		expect(entity.equals(entity)).toBe(true);
+	});
 	it("should be equal when ids are equal", () => {
 		const id = 1;
 

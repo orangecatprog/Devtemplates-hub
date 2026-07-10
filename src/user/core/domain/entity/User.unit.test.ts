@@ -8,6 +8,8 @@ import { Email } from "./email/Email";
 import { Bio } from "./bio/Bio";
 import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import { PasswordHash } from "./passwordHash/PasswordHash";
+import { RoleSchema } from "./role/Role.schema";
+import { Role } from "./role/Role";
 
 describe("User", () => {
 	it("should create a user with valid data", () => {
@@ -104,6 +106,25 @@ describe("User", () => {
 			user.changePasswordHash(newHash);
 
 			expect(user.passwordEqual(newHash)).toBe(true);
+		});
+	});
+	describe("Register date", () => {
+		it("should expose register date correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.registerDate).toBeInstanceOf(Date);
+		});
+	});
+	describe("Role", () => {
+		it("should expose role correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			expect(user.role.value).toBe(RoleSchema.USER);
+		});
+		it("should change role", () => {
+			const user = new User(new UniqueID(1), validUserData());
+
+			user.changeRole(new Role(RoleSchema.ADMIN));
+
+			expect(user.role.value).toBe(RoleSchema.ADMIN);
 		});
 	});
 });
