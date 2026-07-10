@@ -1,6 +1,22 @@
 import { ValueObject } from "@/shared/core/domain/base/valueObject/ValueObject";
-import type { RoleSchema } from "./Role.schema";
+import { RoleSchema } from "./Role.schema";
 
 export class Role extends ValueObject<RoleSchema> {
-	// TODO: Add permissions to the role
+	canManageUsers(): boolean {
+		return this.value === RoleSchema.ADMIN;
+	}
+
+	canManageEntities(): boolean {
+		return (
+			this.value === RoleSchema.ADMIN || this.value === RoleSchema.MODERATOR
+		);
+	}
+
+	canManageTemplates(): boolean {
+		return (
+			this.value === RoleSchema.ADMIN ||
+			this.value === RoleSchema.MODERATOR ||
+			this.value === RoleSchema.USER
+		);
+	}
 }
