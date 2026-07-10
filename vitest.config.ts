@@ -5,6 +5,11 @@ export default defineConfig({
 		globals: true,
 		environment: "node",
 
+		coverage: {
+			provider: "v8",
+			reporter: ["text", "html", "json", "lcov"],
+		},
+
 		exclude: [
 			"node_modules",
 			"dist",
