@@ -3,7 +3,7 @@ import { Email } from "./email/Email";
 import { PasswordHash } from "./passwordHash/PasswordHash";
 import { Role } from "./role/Role";
 import { Username } from "./username/Username";
-import { Url } from "@/shared/core/domain/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 
 export function validUserData() {
 	return {

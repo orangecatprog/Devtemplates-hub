@@ -6,7 +6,7 @@ import { validUserData } from "./User.helper.test";
 import { Username } from "./username/Username";
 import { Email } from "./email/Email";
 import { Bio } from "./bio/Bio";
-import { Url } from "@/shared/core/domain/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import { PasswordHash } from "./passwordHash/PasswordHash";
 
 describe("User", () => {

@@ -4,7 +4,7 @@ import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { validTemplateData } from "./Template.helper.test";
 import { Title } from "./title/Title";
 import { TemplateDescription } from "./description/Description";
-import { Url } from "@/shared/core/domain/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import { Difficulty } from "./difficulty/Difficulty";
 import { State } from "./state/State";
 

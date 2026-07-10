@@ -1,7 +1,7 @@
 import { Entity } from "@/shared/core/domain/base/entity/Entity";
 import type { TechnologyData } from "./TechnologyData";
 import type { Name } from "@/shared/core/domain/entities/name/Name";
-import { Url } from "@/shared/core/domain/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 
 export class Technology extends Entity<TechnologyData> {
 	get name(): Name {

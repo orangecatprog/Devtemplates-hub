@@ -2,7 +2,7 @@ import { Entity } from "@/shared/core/domain/base/entity/Entity";
 import type { TemplateData } from "./TemplateData";
 import type { Title } from "./title/Title";
 import type { Description } from "./description/Description";
-import type { Url } from "@/shared/core/domain/url/Url";
+import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import type { Difficulty } from "./difficulty/Difficulty";
 import { State } from "./state/State";
 

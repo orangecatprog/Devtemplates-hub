@@ -1,7 +1,7 @@
 import { Entity } from "@shared/core/domain/base/entity/Entity";
 import type { UserData } from "./UserData";
 
-import type { Url } from "@/shared/core/domain/url/Url";
+import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import type { Bio } from "./bio/Bio";
 import type { Email } from "./email/Email";
 import type { Username } from "./username/Username";

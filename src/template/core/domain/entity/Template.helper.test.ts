@@ -1,4 +1,4 @@
-import { Url } from "@/shared/core/domain/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import { TemplateDescription } from "./description/Description";
 import { Title } from "./title/Title";
 import { Difficulty } from "./difficulty/Difficulty";
