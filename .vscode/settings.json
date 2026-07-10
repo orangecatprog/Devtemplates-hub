@@ -2,11 +2,35 @@
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.formatOnSave": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
+		"source.fixAll.eslint": "always",
+		"source.organizeImports": "always"
 	},
 
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+
 	"files.eol": "\n",
-	"[typescript]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		"package.json": "bun.lock",
+		".gitignore": ".gitattributes,.lintstagedrc.json,commitlint.config.js",
+		".prettierrc": ".prettierignore",
+		".env": ".env.example"
+	},
+
+	"search.exclude": {
+		"coverage": true,
+		"dist": true,
+		".turbo": true
+	},
+
+	"files.exclude": {
+		"coverage": true,
+		"dist": true
 	}
 }
