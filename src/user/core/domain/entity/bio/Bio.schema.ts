@@ -1,5 +1,5 @@
 export function validateBio(value: string): void {
-	if (value.length < 10) {
+	if (value.length < 10 && value.length !== 0) {
 		throw new Error("Bio must contain at least 10 characters.");
 	}
 	if (value.length > 500) {

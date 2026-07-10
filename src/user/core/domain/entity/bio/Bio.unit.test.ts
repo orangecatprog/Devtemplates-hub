@@ -13,6 +13,11 @@ describe("Bio", () => {
 		);
 	});
 
+	it("should create with an bio of exactly 0 characters", () => {
+		const bio = new Bio("");
+		expect(bio.value).toBe("");
+	});
+
 	it("should throw for a bio longer than 500 characters", () => {
 		expect(() => new Bio("a".repeat(501))).toThrow(
 			"Bio cannot exceed 500 characters.",

@@ -22,7 +22,7 @@
 		"test:favorite": "vitest --dir=src/favorite",
 		"test:download": "vitest --dir=src/download",
 		"test:watch": "vitest --dir=src --watch",
-		"coverage": "vitest run --coverage --dir=src",
+		"coverage": "vitest run --coverage --dir=src --watch",
 		"coverage:watch": "vitest --dir=src --watch --coverage"
 	},
 	"devDependencies": {

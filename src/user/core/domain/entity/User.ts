@@ -4,9 +4,9 @@ import type { UserData } from "./UserData";
 import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
 import type { Bio } from "./bio/Bio";
 import type { Email } from "./email/Email";
-import type { Username } from "./username/Username";
-import type { Role } from "./role/Role";
 import type { PasswordHash } from "./passwordHash/PasswordHash";
+import type { Role } from "./role/Role";
+import type { Username } from "./username/Username";
 
 export class User extends Entity<UserData> {
 	// GETTERS

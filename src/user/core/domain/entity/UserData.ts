@@ -10,7 +10,7 @@ export interface UserData {
 	email: Email;
 	passwordHash: PasswordHash;
 	githubUrl: Url;
-	linkedinUrl: Url | undefined;
+	linkedinUrl?: Url | undefined;
 	bio: Bio;
 	registerDate: Date;
 	role: Role;
