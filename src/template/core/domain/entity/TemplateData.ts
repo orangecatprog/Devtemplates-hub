@@ -1,9 +1,9 @@
-import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import type { Title } from "./title/Title";
-import type { TemplateDescription } from "./description/Description";
-import type { Difficulty } from "./difficulty/Difficulty";
-import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import type { State } from "./state/State";
+import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import type { Url } from "@/shared/core/domain/valueObjects/url";
+import type { TemplateDescription } from "./description";
+import type { Difficulty } from "./difficulty";
+import type { State } from "./state";
+import type { Title } from "./title";
 
 export interface TemplateData {
 	title: Title;

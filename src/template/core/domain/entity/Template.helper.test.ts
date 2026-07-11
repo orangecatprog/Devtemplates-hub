@@ -1,9 +1,9 @@
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import { TemplateDescription } from "./description/Description";
-import { Title } from "./title/Title";
-import { Difficulty } from "./difficulty/Difficulty";
-import { State } from "./state/State";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { Url } from "@/shared/core/domain/valueObjects/url";
+import { TemplateDescription } from "./description";
+import { Difficulty } from "./difficulty";
+import { State } from "./state";
+import { Title } from "./title";
 
 export function validTemplateData() {
 	return {

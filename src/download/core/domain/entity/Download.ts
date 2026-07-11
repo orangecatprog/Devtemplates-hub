@@ -1,5 +1,5 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
-import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { Entity } from "@/shared/core/domain/entities/base";
+import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import type { DownloadData } from "./DownloadData";
 
 export class Download extends Entity<DownloadData> {

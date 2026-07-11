@@ -1,6 +1,6 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import { Score } from "./score/Score";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import type { ReviewData } from "./ReviewData";
+import { Score } from "./score";
 
 export function validReviewData(): ReviewData {
 	return {

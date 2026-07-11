@@ -1,4 +1,4 @@
-import { ValueObject } from "@/shared/core/domain/valueObjects/base/ValueObject";
+import { ValueObject } from "@/shared/core/domain/valueObjects/base";
 import { validateTemplateDescription } from "./Description.schema";
 
 export class TemplateDescription extends ValueObject<string> {

@@ -1,4 +1,4 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import type { FavoriteData } from "./FavoriteData";
 
 export function validFavoriteData(): FavoriteData {

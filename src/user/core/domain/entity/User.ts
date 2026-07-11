@@ -1,12 +1,12 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
+import { Entity } from "@/shared/core/domain/entities/base";
 import type { UserData } from "./UserData";
 
-import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import type { Bio } from "./bio/Bio";
-import type { Email } from "./email/Email";
-import type { PasswordHash } from "./passwordHash/PasswordHash";
-import type { Role } from "./role/Role";
-import type { Username } from "./username/Username";
+import type { Url } from "@/shared/core/domain/valueObjects/url";
+import type { Bio } from "./bio";
+import type { Email } from "./email";
+import type { PasswordHash } from "./passwordHash";
+import type { Role } from "./role";
+import type { Username } from "./username";
 
 export class User extends Entity<UserData> {
 	// GETTERS

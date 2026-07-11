@@ -1,12 +1,12 @@
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { Url } from "@/shared/core/domain/valueObjects/url";
 import { describe, expect, it } from "vitest";
+import { TemplateDescription } from "./description";
+import { Difficulty } from "./difficulty";
+import { State } from "./state";
 import { Template } from "./Template";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { validTemplateData } from "./Template.helper.test";
-import { Title } from "./title/Title";
-import { TemplateDescription } from "./description/Description";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import { Difficulty } from "./difficulty/Difficulty";
-import { State } from "./state/State";
+import { Title } from "./title";
 
 describe("Template", () => {
 	it("should create a template with valid data", () => {

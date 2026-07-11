@@ -1,7 +1,7 @@
-import { Name } from "../../../../shared/core/domain/valueObjects/name/Name";
+import { Name } from "@/shared/core/domain/valueObjects/name";
 import type { CategoryData } from "./CategoryData";
-import { CategoryDescription } from "./description/Description";
-import { Slug } from "./slug/Slug";
+import { CategoryDescription } from "./description";
+import { Slug } from "./slug";
 
 export function validCategoryData(): CategoryData {
 	return {

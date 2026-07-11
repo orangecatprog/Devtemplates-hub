@@ -1,4 +1,4 @@
-import { ValueObject } from "@/shared/core/domain/valueObjects/base/ValueObject";
+import { ValueObject } from "@/shared/core/domain/valueObjects/base";
 import { RoleSchema } from "./Role.schema";
 
 export class Role extends ValueObject<RoleSchema> {

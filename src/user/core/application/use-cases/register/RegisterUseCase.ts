@@ -1,15 +1,14 @@
-import type { IdGenerator } from "@/shared/core/application/contracts/idGenerator/idGenerator";
+import type { IdGenerator } from "@/shared/core/application/contracts/idGenerator";
 import { type UseCase } from "@/shared/core/application/use-cases/base/UseCase";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url";
 import type { UserRepository } from "@/user/core/application/contracts/repository";
-import { Bio } from "@/user/core/domain/entity/bio/Bio";
-import { Email } from "@/user/core/domain/entity/email/Email";
-import { Password } from "@/user/core/domain/entity/password/Password";
-import { PasswordHash } from "@/user/core/domain/entity/passwordHash/PasswordHash";
-import { Role } from "@/user/core/domain/entity/role/Role";
-import { RoleSchema } from "@/user/core/domain/entity/role/Role.schema";
-import { User } from "@/user/core/domain/entity/User";
-import { Username } from "@/user/core/domain/entity/username/Username";
+import { Bio } from "@/user/core/domain/entity/bio";
+import { Email } from "@/user/core/domain/entity/email";
+import { Password } from "@/user/core/domain/entity/password";
+import { PasswordHash } from "@/user/core/domain/entity/passwordHash";
+import { Role, RoleSchema } from "@/user/core/domain/entity/role";
+import { User } from "@/user/core/domain/entity";
+import { Username } from "@/user/core/domain/entity/username";
 import type { PasswordHasher } from "../../contracts/passwordHasher";
 import type { InputRegisterDTO, OutputRegisterDTO } from "./dtos";
 

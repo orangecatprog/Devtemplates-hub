@@ -1,5 +1,5 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import { Content } from "./content/Content";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { Content } from "./content";
 import type { CommentData } from "./CommentData";
 
 export function validCommentData(): CommentData {

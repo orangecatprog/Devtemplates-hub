@@ -1,7 +1,7 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
-import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { Entity } from "@/shared/core/domain/entities/base";
+import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import type { CommentData } from "./CommentData";
-import type { Content } from "./content/Content";
+import type { Content } from "./content";
 
 export class Comment extends Entity<CommentData> {
 	get content(): Content {

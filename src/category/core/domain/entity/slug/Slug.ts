@@ -1,4 +1,4 @@
-import { ValueObject } from "@/shared/core/domain/valueObjects/base/ValueObject";
+import { ValueObject } from "@/shared/core/domain/valueObjects/base";
 import { validateSlug } from "./Slug.schema";
 
 export class Slug extends ValueObject<string> {

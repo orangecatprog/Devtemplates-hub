@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { validCommentData } from "./Comment.helper.test";
 import { Comment } from "./Comment";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { Content } from "./content/Content";
 
 describe("Comment", () => {

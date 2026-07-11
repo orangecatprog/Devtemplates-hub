@@ -1,4 +1,4 @@
-import type { UniqueIDType } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID.type";
+import type { UniqueIDType } from "@/shared/core/domain/valueObjects/uniqueID";
 
 export interface OutputRegisterDTO {
 	id: UniqueIDType;

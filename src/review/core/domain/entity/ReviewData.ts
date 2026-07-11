@@ -1,5 +1,5 @@
-import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import type { Score } from "./score/Score";
+import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import type { Score } from "./score";
 
 export interface ReviewData {
 	score: Score;

@@ -1,10 +1,9 @@
-import type { UseCase } from "@/shared/core/application/use-cases/base/UseCase";
+import type { UseCase } from "@/shared/core/application/use-cases/base";
 import type { User } from "@/user/core/domain/entity";
 import type { PasswordHasher } from "../../contracts/passwordHasher";
 import type { UserRepository } from "../../contracts/repository";
-import type { TokenProvider } from "./contracts/tokenProvider/TokenProvider";
-import type { InputLoginDTO } from "./dtos/InputDTO";
-import type { OutputLoginDTO } from "./dtos/OutputDTO";
+import type { TokenProvider } from "./contracts/tokenProvider";
+import type { InputLoginDTO, OutputLoginDTO } from "./dtos";
 
 export class LoginUseCase implements UseCase<InputLoginDTO, OutputLoginDTO> {
 	constructor(

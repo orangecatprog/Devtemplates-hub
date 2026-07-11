@@ -1,6 +1,6 @@
-import type { Name } from "../../../../shared/core/domain/valueObjects/name/Name";
-import type { CategoryDescription } from "./description/Description";
-import type { Slug } from "./slug/Slug";
+import type { Name } from "../../../../shared/core/domain/valueObjects/name";
+import type { CategoryDescription } from "./description";
+import type { Slug } from "./slug";
 
 export interface CategoryData {
 	name: Name;

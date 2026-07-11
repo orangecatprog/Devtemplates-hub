@@ -1,11 +1,10 @@
-import { Bio } from "./bio/Bio";
-import { Email } from "./email/Email";
-import { PasswordHash } from "./passwordHash/PasswordHash";
-import { Role } from "./role/Role";
-import { RoleSchema } from "./role/Role.schema";
+import { Url } from "@/shared/core/domain/valueObjects/url";
+import { Bio } from "./bio";
+import { Email } from "./email";
+import { PasswordHash } from "./passwordHash";
+import { Role, RoleSchema } from "./role";
 import type { UserData } from "./UserData";
-import { Username } from "./username/Username";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
+import { Username } from "./username";
 
 export function validUserData(): UserData {
 	return {

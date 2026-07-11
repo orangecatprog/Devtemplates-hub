@@ -1,15 +1,14 @@
-import { describe, it, expect } from "vitest";
+import { describe, expect, it } from "vitest";
 
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { Url } from "@/shared/core/domain/valueObjects/url";
+import { Bio } from "./bio";
+import { Email } from "./email";
+import { PasswordHash } from "./passwordHash";
+import { Role, RoleSchema } from "./role";
 import { User } from "./User";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
 import { validUserData } from "./User.helper.test";
-import { Username } from "./username/Username";
-import { Email } from "./email/Email";
-import { Bio } from "./bio/Bio";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import { PasswordHash } from "./passwordHash/PasswordHash";
-import { RoleSchema } from "./role/Role.schema";
-import { Role } from "./role/Role";
+import { Username } from "./username";
 
 describe("User", () => {
 	it("should create a user with valid data", () => {
@@ -86,10 +85,10 @@ describe("User", () => {
 		it("should set linkedin url", () => {
 			const user = new User(new UniqueID(1), validUserData());
 
-			const url = new Url("https://linkedin.com/in/new");
+			const url = new Url("https://linkedin.com/inew");
 			user.changeLinkedinUrl(url);
 
-			expect(user.linkedinUrl?.value).toBe("https://linkedin.com/in/new");
+			expect(user.linkedinUrl?.value).toBe("https://linkedin.com/inew");
 		});
 	});
 	describe("Password Hash", () => {

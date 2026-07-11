@@ -1,7 +1,7 @@
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { describe, expect, it } from "vitest";
-import { validFavoriteData } from "./Favorite.helper.test";
 import { Favorite } from "./Favorite";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { validFavoriteData } from "./Favorite.helper.test";
 
 describe("Favorite", () => {
 	it("should create a favorite with valid data", () => {

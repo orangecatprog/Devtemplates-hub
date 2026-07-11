@@ -1,8 +1,8 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
-import type { Name } from "../../../../shared/core/domain/valueObjects/name/Name";
+import { Entity } from "@/shared/core/domain/entities/base";
+import type { Name } from "../../../../shared/core/domain/valueObjects/name";
 import type { CategoryData } from "./CategoryData";
-import type { CategoryDescription } from "./description/Description";
-import type { Slug } from "./slug/Slug";
+import type { CategoryDescription } from "./description";
+import type { Slug } from "./slug";
 
 export class Category extends Entity<CategoryData> {
 	get name(): Name {

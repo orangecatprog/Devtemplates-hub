@@ -1,10 +1,10 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
-import type { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import type { Description } from "./description/Description";
-import type { Difficulty } from "./difficulty/Difficulty";
-import { State } from "./state/State";
+import { Entity } from "@/shared/core/domain/entities/base";
+import type { Url } from "@/shared/core/domain/valueObjects/url";
+import type { TemplateDescription } from "./description";
+import type { Difficulty } from "./difficulty";
+import { State } from "./state";
 import type { TemplateData } from "./TemplateData";
-import type { Title } from "./title/Title";
+import type { Title } from "./title";
 
 export class Template extends Entity<TemplateData> {
 	get title(): Title {
@@ -15,11 +15,11 @@ export class Template extends Entity<TemplateData> {
 		this.data.title = title;
 	}
 
-	get description(): Description {
+	get description(): TemplateDescription {
 		return this.data.description;
 	}
 
-	changeDescription(description: Description): void {
+	changeDescription(description: TemplateDescription): void {
 		this.data.description = description;
 	}
 

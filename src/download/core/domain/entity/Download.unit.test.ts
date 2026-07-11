@@ -1,7 +1,7 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import { describe, it, expect } from "vitest";
-import { validDownloadData } from "./Download.helper.test";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { describe, expect, it } from "vitest";
 import { Download } from "./Download";
+import { validDownloadData } from "./Download.helper.test";
 
 describe("Download", () => {
 	it("should create a download with valid data", () => {

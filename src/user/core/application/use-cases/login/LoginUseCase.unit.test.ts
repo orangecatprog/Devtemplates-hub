@@ -1,18 +1,17 @@
 import { describe, expect, it } from "vitest";
 
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
-import { Bio } from "@/user/core/domain/entity/bio/Bio";
-import { Email } from "@/user/core/domain/entity/email/Email";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { Url } from "@/shared/core/domain/valueObjects/url";
+import { Bio } from "@/user/core/domain/entity/bio";
+import { Email } from "@/user/core/domain/entity/email";
 import { PasswordHash } from "@/user/core/domain/entity/passwordHash";
-import { Role } from "@/user/core/domain/entity/role/Role";
-import { RoleSchema } from "@/user/core/domain/entity/role/Role.schema";
-import { User } from "@/user/core/domain/entity/User";
-import { Username } from "@/user/core/domain/entity/username/Username";
-import { LoginUseCase } from "./LoginUseCase";
-import { FakeUserRepository } from "../../contracts/repository/UserRepository.fake.test";
+import { Role, RoleSchema } from "@/user/core/domain/entity/role";
+import { User } from "@/user/core/domain/entity";
+import { Username } from "@/user/core/domain/entity/username";
 import { FakePasswordHasher } from "../../contracts/passwordHasher/PasswordHasher.fake.test";
+import { FakeUserRepository } from "../../contracts/repository/UserRepository.fake.test";
 import { FakeTokenProvider } from "./contracts/tokenProvider/TokenProvider.fake.test";
+import { LoginUseCase } from "./LoginUseCase";
 
 describe("LoginUseCase", () => {
 	it("should login using email", async () => {

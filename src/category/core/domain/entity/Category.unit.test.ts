@@ -1,10 +1,10 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { describe, expect, it } from "vitest";
-import { Name } from "../../../../shared/core/domain/valueObjects/name/Name";
+import { Name } from "../../../../shared/core/domain/valueObjects/name";
 import { Category } from "./Category";
 import { validCategoryData } from "./Category.helper.test";
-import { CategoryDescription } from "./description/Description";
-import { Slug } from "./slug/Slug";
+import { CategoryDescription } from "./description";
+import { Slug } from "./slug";
 
 describe("Category", () => {
 	it("should create a category with valid data", () => {

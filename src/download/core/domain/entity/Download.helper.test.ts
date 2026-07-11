@@ -1,4 +1,4 @@
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 
 export function validDownloadData() {
 	return {

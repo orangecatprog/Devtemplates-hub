@@ -1,5 +1,5 @@
 import { Name } from "@/shared/core/domain/valueObjects/name/Name";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { describe, expect, it } from "vitest";
 import { Technology } from "./Technology";
 import { validTechnologyData } from "./Technology.helper.test";

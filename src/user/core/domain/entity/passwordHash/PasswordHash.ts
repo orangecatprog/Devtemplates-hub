@@ -1,4 +1,4 @@
-import { ValueObject } from "@/shared/core/domain/valueObjects/base/ValueObject";
+import { ValueObject } from "@/shared/core/domain/valueObjects/base";
 import { validatePasswordHash } from "./PasswordHash.schema";
 
 export class PasswordHash extends ValueObject<string> {

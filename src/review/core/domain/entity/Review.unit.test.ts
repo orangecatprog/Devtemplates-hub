@@ -1,8 +1,8 @@
+import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { describe, expect, it } from "vitest";
-import { validReviewData } from "./Review.helper.test";
 import { Review } from "./Review";
-import { Score } from "./score/Score";
-import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
+import { validReviewData } from "./Review.helper.test";
+import { Score } from "./score";
 
 describe("Review", () => {
 	it("should create a review with valid data", () => {

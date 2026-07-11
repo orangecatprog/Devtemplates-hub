@@ -1,6 +1,6 @@
-import { Entity } from "@/shared/core/domain/entities/base/Entity";
+import { Entity } from "@/shared/core/domain/entities/base";
 import type { Name } from "@/shared/core/domain/valueObjects/name/Name";
-import { Url } from "@/shared/core/domain/valueObjects/url/Url";
+import { Url } from "@/shared/core/domain/valueObjects/url";
 import type { TechnologyData } from "./TechnologyData";
 
 export class Technology extends Entity<TechnologyData> {

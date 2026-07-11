@@ -1,5 +1,5 @@
-import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID/UniqueID";
-import type { Content } from "./content/Content";
+import type { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import type { Content } from "./content";
 
 export interface CommentData {
 	content: Content;
