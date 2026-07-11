@@ -17,8 +17,8 @@
 
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
-		"package.json": "bun.lock",
-		".gitignore": ".gitattributes,.lintstagedrc.json,commitlint.config.js",
+		"package.json": "bun.lock, .nvmrc",
+		".gitignore": ".gitattributes,.lintstagedrc.json,commitlint.config.ts",
 		".prettierrc": ".prettierignore",
 		".env": ".env.example"
 	},

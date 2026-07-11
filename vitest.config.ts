@@ -1,19 +1,6 @@
-import { rm } from "fs";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
-	plugins: [
-		{
-			name: "coverage",
-			configureServer(server) {
-				server.watcher.on("change", (file) => {
-					console.log("Archivo cambiado:", file);
-
-					rm("coverage", () => {});
-				});
-			},
-		},
-	],
 	test: {
 		globals: true,
 		environment: "node",
