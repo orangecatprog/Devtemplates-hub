@@ -10,7 +10,7 @@ import { Role } from "@/user/core/domain/entity/role/Role";
 import { RoleSchema } from "@/user/core/domain/entity/role/Role.schema";
 import { User } from "@/user/core/domain/entity/User";
 import { Username } from "@/user/core/domain/entity/username/Username";
-import type { PasswordHasher } from "./contracts/passwordHasher";
+import type { PasswordHasher } from "../../contracts/passwordHasher";
 import type { InputRegisterDTO, OutputRegisterDTO } from "./dtos";
 
 export class RegisterUseCase implements UseCase<
@@ -24,6 +24,9 @@ export class RegisterUseCase implements UseCase<
 	) {}
 
 	async execute(dto: InputRegisterDTO): Promise<OutputRegisterDTO> {
+		if (dto.password !== dto.confirmPassword) {
+			throw new Error("Passwords do not match");
+		}
 		const passwordVO = new Password(dto.password);
 		const passwordHash = await this.passwordHasher.hash(passwordVO.value);
 		const user = new User(this.idGenerator.generate(), {

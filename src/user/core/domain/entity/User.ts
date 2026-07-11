@@ -38,6 +38,10 @@ export class User extends Entity<UserData> {
 		return this.data.role;
 	}
 
+	get passwordHash(): PasswordHash {
+		return this.data.passwordHash;
+	}
+
 	// MUTATORS
 
 	changeUsername(username: Username): void {

@@ -97,6 +97,12 @@ describe("User", () => {
 			const user = new User(new UniqueID(1), validUserData());
 			expect(user.equals(user)).toBe(true);
 		});
+		it("should not compare password hashes correctly", () => {
+			const user = new User(new UniqueID(1), validUserData());
+			const newUser = new User(new UniqueID(2), validUserData());
+
+			expect(user.equals(newUser)).toBe(false);
+		});
 
 		it("should update password hash", () => {
 			const user = new User(new UniqueID(1), validUserData());
