@@ -2,11 +2,11 @@ import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
 import { Url } from "@/shared/core/domain/valueObjects/url";
 import { describe, expect, it } from "vitest";
 import { TemplateDescription } from "./description";
-import { Difficulty } from "./difficulty";
-import { State } from "./state";
+import { StateSchema } from "./state";
 import { Template } from "./Template";
 import { validTemplateData } from "./Template.helper.test";
 import { Title } from "./title";
+import { DifficultySchema } from "./difficulty";
 
 describe("Template", () => {
 	it("should create a template with valid data", () => {
@@ -82,7 +82,7 @@ describe("Template", () => {
 			expect(template.demoUrl?.value).toBe(newUrl.value);
 		});
 	});
-	describe("Difficulty", () => {
+	describe("DifficultySchema", () => {
 		it("should expose difficulty correctly", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());
 
@@ -91,12 +91,12 @@ describe("Template", () => {
 		it("should change difficulty", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());
 
-			template.changeDifficulty(Difficulty.BEGINNER);
+			template.changeDifficultySchema(DifficultySchema.BEGINNER);
 
-			expect(template.difficulty).toBe(Difficulty.BEGINNER);
+			expect(template.difficulty).toBe(DifficultySchema.BEGINNER);
 		});
 	});
-	describe("State", () => {
+	describe("StateSchema", () => {
 		it("should expose state correctly", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());
 
@@ -107,7 +107,7 @@ describe("Template", () => {
 
 			template.publish();
 
-			expect(template.state).toBe(State.PUBLISHED);
+			expect(template.state).toBe(StateSchema.PUBLISHED);
 		});
 		it("should throw when trying to publish a template that is already published", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());
@@ -123,7 +123,7 @@ describe("Template", () => {
 			template.publish();
 			template.archive();
 
-			expect(template.state).toBe(State.ARCHIVED);
+			expect(template.state).toBe(StateSchema.ARCHIVED);
 		});
 		it("should throw when trying to archive a template that is already archived", () => {
 			const template = new Template(new UniqueID(1), validTemplateData());

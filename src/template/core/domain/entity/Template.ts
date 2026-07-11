@@ -1,8 +1,8 @@
 import { Entity } from "@/shared/core/domain/entities/base";
 import type { Url } from "@/shared/core/domain/valueObjects/url";
 import type { TemplateDescription } from "./description";
-import type { Difficulty } from "./difficulty";
-import { State } from "./state";
+import type { DifficultySchema } from "./difficulty";
+import { StateSchema } from "./state";
 import type { TemplateData } from "./TemplateData";
 import type { Title } from "./title";
 
@@ -39,29 +39,29 @@ export class Template extends Entity<TemplateData> {
 		this.data.demoUrl = demoUrl;
 	}
 
-	get difficulty(): Difficulty {
+	get difficulty(): DifficultySchema {
 		return this.data.difficulty;
 	}
 
-	changeDifficulty(difficulty: Difficulty): void {
+	changeDifficultySchema(difficulty: DifficultySchema): void {
 		this.data.difficulty = difficulty;
 	}
 
-	get state(): State {
+	get state(): StateSchema {
 		return this.data.state;
 	}
 
 	publish(): void {
-		if (this.data.state !== State.DRAFT) {
+		if (this.data.state !== StateSchema.DRAFT) {
 			throw new Error("Cannot publish a template that is not a draft.");
 		}
-		this.data.state = State.PUBLISHED;
+		this.data.state = StateSchema.PUBLISHED;
 	}
 
 	archive(): void {
-		if (this.data.state !== State.PUBLISHED) {
+		if (this.data.state !== StateSchema.PUBLISHED) {
 			throw new Error("Cannot archive a template that is not published.");
 		}
-		this.data.state = State.ARCHIVED;
+		this.data.state = StateSchema.ARCHIVED;
 	}
 }

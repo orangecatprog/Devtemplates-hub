@@ -36,9 +36,6 @@ export class LoginUseCase implements UseCase<InputLoginDTO, OutputLoginDTO> {
 		} else {
 			user = await this.userRepository.findByUsername(identifier);
 		}
-		if (!user) {
-			throw new Error("User not found");
-		}
 		return user;
 	}
 }

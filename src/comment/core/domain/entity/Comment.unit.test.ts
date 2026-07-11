@@ -1,7 +1,7 @@
-import { describe, expect, it } from "vitest";
-import { validCommentData } from "./Comment.helper.test";
-import { Comment } from "./Comment";
 import { UniqueID } from "@/shared/core/domain/valueObjects/uniqueID";
+import { describe, expect, it } from "vitest";
+import { Comment } from "./Comment";
+import { validCommentData } from "./Comment.helper.test";
 import { Content } from "./content/Content";
 
 describe("Comment", () => {
@@ -26,10 +26,9 @@ describe("Comment", () => {
 	});
 	describe("Created at", () => {
 		it("should expose created at correctly", () => {
-			const comment = new Comment(new UniqueID(1), validCommentData());
-			expect(comment.createdAt.getTime()).toBe(
-				validCommentData().createdAt.getTime(),
-			);
+			const data = validCommentData();
+			const comment = new Comment(new UniqueID(1), data);
+			expect(comment.createdAt.getTime()).toBe(data.createdAt.getTime());
 		});
 	});
 	describe("User ID", () => {
