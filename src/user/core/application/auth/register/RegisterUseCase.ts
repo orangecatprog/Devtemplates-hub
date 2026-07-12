@@ -2,14 +2,14 @@ import type { IdGenerator } from "@/shared/core/application/contracts/idGenerato
 import { type UseCase } from "@/shared/core/application/use-cases/base/UseCase";
 import { Url } from "@/shared/core/domain/valueObjects/url";
 import type { UserRepository } from "@/user/core/application/contracts/repository";
+import { User } from "@/user/core/domain/entity";
 import { Bio } from "@/user/core/domain/entity/bio";
 import { Email } from "@/user/core/domain/entity/email";
 import { Password } from "@/user/core/domain/entity/password";
 import { PasswordHash } from "@/user/core/domain/entity/passwordHash";
 import { Role, RoleSchema } from "@/user/core/domain/entity/role";
-import { User } from "@/user/core/domain/entity";
 import { Username } from "@/user/core/domain/entity/username";
-import type { PasswordHasher } from "../../contracts/passwordHasher";
+import type { PasswordHasher } from "../contracts/passwordHasher";
 import type { InputRegisterDTO, OutputRegisterDTO } from "./dtos";
 
 export class RegisterUseCase implements UseCase<

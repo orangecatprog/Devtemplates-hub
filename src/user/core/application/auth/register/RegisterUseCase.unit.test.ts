@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 
 import { FakeIdGenerator } from "@/shared/core/application/contracts/idGenerator/idGenerator.fake.test";
-import { FakePasswordHasher } from "../../contracts/passwordHasher/PasswordHasher.fake.test";
 import { FakeUserRepository } from "../../contracts/repository/UserRepository.fake.test";
+import { FakePasswordHasher } from "../contracts/passwordHasher/PasswordHasher.fake.test";
 import { RegisterUseCase } from "./RegisterUseCase";
 
 describe("RegisterUseCase", () => {

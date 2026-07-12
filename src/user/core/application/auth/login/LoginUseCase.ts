@@ -1,8 +1,8 @@
 import type { UseCase } from "@/shared/core/application/use-cases/base";
 import type { User } from "@/user/core/domain/entity";
-import type { PasswordHasher } from "../../contracts/passwordHasher";
 import type { UserRepository } from "../../contracts/repository";
-import type { TokenProvider } from "./contracts/tokenProvider";
+import type { PasswordHasher } from "../contracts/passwordHasher";
+import type { TokenProvider } from "../contracts/tokenProvider";
 import type { InputLoginDTO, OutputLoginDTO } from "./dtos";
 
 export class LoginUseCase implements UseCase<InputLoginDTO, OutputLoginDTO> {
@@ -23,9 +23,12 @@ export class LoginUseCase implements UseCase<InputLoginDTO, OutputLoginDTO> {
 		) {
 			throw new Error("Invalid credentials");
 		}
-		const token = await this.tokenProvider.generateToken(user);
+		const accessToken = await this.tokenProvider.generateAccessToken(user);
+		const refreshToken =
+			await this.tokenProvider.generateRefreshToken(user);
 		return {
-			token,
+			accessToken,
+			refreshToken,
 		};
 	}
 
