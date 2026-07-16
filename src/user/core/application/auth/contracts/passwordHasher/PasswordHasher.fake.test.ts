@@ -5,6 +5,6 @@ export class FakePasswordHasher implements PasswordHasher {
 		return "fake-hash" + password;
 	}
 	async compare(password: string, hash: string): Promise<boolean> {
-		return hash.includes(password);
+		return hash === "fake-hash" + password;
 	}
 }

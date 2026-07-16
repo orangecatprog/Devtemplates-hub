@@ -10,10 +10,9 @@ describe("Download", () => {
 	});
 	describe("Date", () => {
 		it("should expose date correctly", () => {
-			const download = new Download(new UniqueID(1), validDownloadData());
-			expect(download.date.getTime()).toBe(
-				validDownloadData().date.getTime(),
-			);
+			const data = validDownloadData();
+			const download = new Download(new UniqueID(1), data);
+			expect(download.date.getTime()).toBe(data.date.getTime());
 		});
 	});
 	describe("User ID", () => {
