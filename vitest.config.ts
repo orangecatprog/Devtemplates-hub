@@ -16,7 +16,7 @@ export default defineConfig({
 			"**/*.mock.test.ts",
 			"**/*.fake.test.ts",
 			"**/*.helper.test.ts",
-			"./deprecated/**/*.ts",
+			"./restores/**/*",
 		],
 	},
 	resolve: {

@@ -10,7 +10,7 @@
 		"check": "eslint . && prettier --check .",
 		"prepare": "husky",
 		"lint-staged": "lint-staged",
-		"test": "vitest",
+		"test": "vitest --dir=src",
 		"test:all": "vitest --dir=src",
 		"test:shared": "vitest --dir=src/shared",
 		"test:template": "vitest --dir=src/template",

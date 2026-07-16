@@ -39,5 +39,5 @@
 
 	"include": ["./src"],
 
-	"exclude": ["./dist", "./coverage", "./node_modules"]
+	"exclude": ["./dist", "./coverage", "./node_modules", "./restores"]
 }
